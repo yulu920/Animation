@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#d1{
+				width: 18.75rem;
+				height: 200px;
+				/* border: 1px solid #ccc; */
+				background-image: url(img/素材.png);
+				background-size: auto;
+				/* 背景图片的位置
+				background-position: x y;  水平、上下*/
+				/* background-position: 0px 100px; */
+				/* animation: lxw 2s steps(16) infinite; steps(16)16帧 */ 
+				position: absolute;
+				top: 0;
+				left: 0;
+				
+			}
+			@keyframes lxw{
+				from{background-position: 0 0;}
+				to{background-position: 0 -3072px;}
+			}
+			#mingren:checked~#d1{
+				animation: lxw 2s steps(16) infinite;/* steps(16)16帧 */
+				z-index: 1;
+			}
+			#d2{
+				width: 18.75rem;
+				height: 150px;
+				/* border: 1px solid #ccc; */
+				background-image: url(img/素材2.png);
+				/* 百分比元素宽度的百分比,不是图片本身的百分比 */
+				background-size:  auto;
+				animation: qianniao 2s steps(13) infinite;
+				position: absolute;
+				top: 80px;
+				left:50px;
+			}
+			@keyframes qianniao{
+				from{
+					background-position: 0 0;
+				}
+				to{ background-position: 0 -2496px;}
+			}
+			.main{
+			   width:600px ;
+			   height: 400px;
+			   margin: 0 auto;
+			   border: 1px solid #CCCCCC;
+			   position: relative;
+			}
+			.btn{
+				display: inline-block;
+				width: 100px;
+				height: 40px;
+				font-size: 20px;
+				color: black;
+				border:  1px solid #CCCCCC;
+				border-radius: 10px;
+				text-align: center;
+				line-height: 40px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="main">
+			<input type="checkbox" name="" id="mingren" value="" />
+			<div id="d1"></div>
+			<div id="d2"></div>
+		</div>
+		<label class="btn" for="mingren">放螺旋丸</label>
+		
+	</body>
+</html>
